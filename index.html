@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div
+      id="app"
+      class="flex flex-col font-mono text-slate-50 bg-black min-h-screen w-full"
+    >
+      <div class="border-b border-b-slate-700">
+        <nav
+          class="w-full h-20 text-3xl font-bold flex items-center container mx-auto"
+        >
+          dot-dot
+        </nav>
+      </div>
+      <div class="flex flex-grow bg-stone-950">
+        <div
+          class="flex flex-col justify-center items-center w-20 p-2 gap-2 text-2xl bg-black border-r border-r-slate-700"
+        >
+          <button
+            title="pencil"
+            id="pencil"
+            class="bg-stone-800 p-2 aspect-square rounded-sm"
+          >
+            ✏️
+          </button>
+          <button
+            title="eraser"
+            id="eraser"
+            class="bg-stone-800 p-2 aspect-square rounded-sm"
+          >
+            🟦
+          </button>
+          <button
+            title="fill"
+            id="fill"
+            class="bg-stone-800 p-2 aspect-square rounded-sm"
+          >
+            🪣
+          </button>
+        </div>
+        <div class="flex grow justify-center items-center">
+          <canvas id="base_canvas" class="border border-slate-100"></canvas>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center w-20 p-2 gap-2 text-2xl bg-black border-l border-l-slate-700"
+        >
+          <label
+            for="color_picker"
+            class="flex relative flex-col gap-2 ring-1 ring-slate-700 p-1 rounded-sm justify-center items-center"
+          >
+            <input
+              type="color"
+              id="color_picker"
+              class="absolute top-1 left-2 w-0 h-0 scale-0"
+            />
+            <div
+              id="current_color_picked"
+              class="w-12 cursor-pointer h-8 rounded-sm border border-slate-500"
+            ></div>
+            <div id="current_color_picked_code" class="text-xs">#000000</div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

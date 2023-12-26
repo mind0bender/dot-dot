@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active-tool {
+    @apply bg-gray-900 ring ring-slate-400;
+}
