@@ -1,6 +1,4 @@
-import { canvas, getMousePosition, mousePressed } from "../../canvas";
-import { matrix } from "../states";
-import { Color, Point } from "../misc";
+import { Color } from "../misc";
 
 export let currentColor: Color = "#000";
 
@@ -28,9 +26,4 @@ colorPicker.addEventListener("input", (e: Event) => {
   currentColor = (e.target as HTMLInputElement)!.value;
   currentColorPicked.style.backgroundColor = currentColor;
   currentColorPickedCode.innerText = currentColor;
-});
-
-canvas.addEventListener("mousemove", (e: MouseEvent) => {
-  const { x: mouseX, y: mouseY }: Point = getMousePosition(e);
-  if (mousePressed) matrix[mouseY][mouseX] = "#000";
 });

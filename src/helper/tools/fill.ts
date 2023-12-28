@@ -27,6 +27,7 @@ canvas.addEventListener("click", (e: MouseEvent) => {
   while (toFill.length > 0) {
     const current = toFill.pop() as Point;
     matrix[current.y][current.x] = currentColor;
+
     for (let j = -1; j <= 1; j++) {
       for (let i = -1; i <= 1; i++) {
         if (i === 0 && j === 0) continue;

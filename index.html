@@ -15,7 +15,7 @@
         <nav
           class="w-full h-20 text-3xl font-bold flex items-center container mx-auto"
         >
-          dot-dot
+          <a href="/">dot-dot</a>
         </nav>
       </div>
       <div class="flex flex-grow bg-stone-950">
@@ -44,14 +44,22 @@
             🪣
           </button>
         </div>
+        <div
+          id="filename"
+          contenteditable="true"
+          class="-skew-x-6 fixed top-20 left-20 focus:outline-none focus:ring focus:border-none border-r border-b px-2 py-1 flex h-fit"
+        >
+          untitled
+        </div>
         <div class="flex grow justify-center items-center">
           <canvas id="base_canvas" class="border border-slate-100"></canvas>
         </div>
         <div
-          class="flex flex-col justify-center items-center w-20 p-2 gap-2 text-2xl bg-black border-l border-l-slate-700"
+          class="py-6 flex flex-col justify-between items-center w-20 p-2 gap-2 text-2xl bg-black border-l border-l-slate-700"
         >
           <label
             for="color_picker"
+            title="color picker"
             class="flex relative flex-col gap-2 ring-1 ring-slate-700 p-1 rounded-sm justify-center items-center"
           >
             <input
@@ -65,6 +73,22 @@
             ></div>
             <div id="current_color_picked_code" class="text-xs">#000000</div>
           </label>
+          <div class="flex flex-col justify-center items-center gap-2">
+            <button
+              title="save"
+              id="save"
+              class="bg-stone-800 p-2 aspect-square rounded-sm"
+            >
+              📁
+            </button>
+            <button
+              title="download"
+              id="download"
+              class="bg-stone-800 p-2 aspect-square rounded-sm"
+            >
+              ⬇️
+            </button>
+          </div>
         </div>
       </div>
     </div>

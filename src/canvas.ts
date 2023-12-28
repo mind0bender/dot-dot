@@ -51,9 +51,3 @@ canvas.addEventListener("mousedown", () => {
 canvas.addEventListener("mouseup", () => {
   mousePressed = false;
 });
-
-canvas.addEventListener("mousemove", (e: MouseEvent) => {
-  ctx.fillStyle = "#000";
-  ctx.font = "30px Arial";
-  ctx.fillText(JSON.stringify(getMousePosition(e)), 50, 50);
-});
